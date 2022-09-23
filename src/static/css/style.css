@@ -127,7 +127,7 @@
   
   /* Showcase */
   #showcase {
-    background: url('../images/hotel.jpg');
+    background: url('../static/img/hotel.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -166,19 +166,19 @@
   
   /* Features */
   #features .features-1 {
-    background: url('../images/hotelha.jpg');
+    background: url('../static/img/hotelha.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   #features .features-2 {
-    background: url('../images/habitacion2.jpg');
+    background: url('../static/img/habitacion2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   #features .features-3 {
-    background: url('../images/pexels.jpg');
+    background: url('../static/img/pexels.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -214,7 +214,7 @@
   
   /* Testimonials */
   #testimonial {
-    background: url('..//images/donal.jpg');
+    background: url('../static/img/donal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -265,21 +265,21 @@
   
   /* Features Contact */
   #features-contact .location {
-    background: url('../images/contact1.jpg');
+    background: url('../static/img/contact1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   
   #features-contact .phone{
-    background: url('../images/contac2.jpg');
+    background: url('../static/img/contac2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   
   #features-contact .email {
-    background: url('../images/contac3.jpg');
+    background: url('../static/img/contac3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
