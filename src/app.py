@@ -12,17 +12,21 @@ app.config['MYSQL_DB'] = 'hotel_gevora'
 
 conexion = MySQL()
 
-@app.route('/')
+@app.route('/index.html')
 def index():
     return render_template('auth/index.html')
 
-@app.route('/sobrenosotros')
+@app.route('/sobrenosotros.html')
 def sobrenosotros():
     return render_template('auth/sobrenosotros.html')
 
-@app.route('/contacto')
-def contacto():
+@app.route('/contact.html')
+def contact():
     return render_template('auth/contact.html')
+
+@app.route('/login.html')
+def login():
+    return render_template('auth/login.html')
 
 if __name__=='__main__':
     app.config.from_object(config['development'])
