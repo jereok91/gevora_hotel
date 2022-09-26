@@ -152,5 +152,5 @@ body {
   border-radius: 50%;
   position: absolute;
   top: -50%;
-  left: calc(50% -50px);
+  left: calc(50% - 50px);
 }
