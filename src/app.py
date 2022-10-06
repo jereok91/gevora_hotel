@@ -1,18 +1,31 @@
 from cgitb import html
-from flask import Flask, render_template
+from flask import Flask, render_template, g
 from config import config
-from flask_mysqldb import MySQL
+import sqlite3
+
+DATABASE = './database.db'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
 
 app=Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Rapsoda25'
-app.config['MYSQL_DB'] = 'hotel_gevora'
 
-conexion = MySQL(app)
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
 
 @app.route('/')
 def inicio():
+    cur = get_db().cursor()
+    print(cur)    
     return render_template('auth/inicio.html')
 
 @app.route('/sobrenosotros.html')
