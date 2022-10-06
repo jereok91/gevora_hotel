@@ -1,0 +1,86 @@
+html{
+    background: url("../imagenes/loginh.jpg") no-repeat;
+	background-size: cover;
+    min-height: 100%;
+}
+
+body{
+	background-color: transparent;
+	color: white;
+	
+}
+
+#formulario_registro{
+	max-width: 800px;
+	margin: 120px auto;
+}
+
+ #formulario_registro .imagen{
+	float:left;
+	background-image: url("");
+	width: 50%;
+	background-size: cover;
+	background-position: 25%;
+}
+
+#formulario_registro .frm{
+	float:right;
+	height: 500px;
+    width: 50%;
+    min-width: 250px;
+    padding: 0 35px;
+    background-size: 100% 100%;
+    background-color: rgba(50, 48, 48, 0.591);
+}
+
+#formulario_registro h1{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color:transparent;
+	color: white;
+}
+
+#formulario_registro .form-control{
+	width: 90%;
+	padding: 12px 20px;
+	height: auto;
+}
+
+@media screen and (max-width: 700px){
+	#formulario_registro .imagen{
+		width: 30%;
+	    background-position: 60%;
+	}
+
+	#formulario_registro .frm{
+		width: 70%;
+		
+	}
+
+	#formulario_registro .form-control{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#formulario_registro .imagen{
+		display: none;
+	}
+
+	#formulario_registro .frm{
+		width: 100%;
+	}
+
+	#formulario_registro h1{
+		text-align: center;
+	}
+
+	#formulario_registro .btn{
+		width: 100%;
+		margin-top: 40px;
+		color: rgb(0, 0, 0);
+		
+		
+		
+	}
+}
