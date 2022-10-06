@@ -9,8 +9,7 @@ app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Rapsoda25'
 app.config['MYSQL_DB'] = 'hotel_gevora'
 
-
-conexion = MySQL()
+conexion = MySQL(app)
 
 @app.route('/')
 def inicio():
