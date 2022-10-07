@@ -19,8 +19,10 @@
                 <ul>
                     <li><a href="index.html">inicio</a></li>
                     <li><a href="sobrenosotros.html">sobre nosotros</a></li>
-                    <li><a href="contact.html"class="current">contacto</a></li>
+                    <li><a href="contact.html">contacto</a></li>
                     <li><a href="login.html">inicio de sesion</a></li>
+                    <li><a href="registro.html"class="current">registro</a></li>
+                    
                 </ul>
             </div>
         </nav>
@@ -28,17 +30,21 @@
 
     <hr>
 
-    <section id="contact" class="py-80">
+    <section id="registro" class="py-80">
         <div class="container">
             <h1>Contactenos</h1>
-            <form action="/contact/guardar" method="post" enctype="multipart/form-data">
+            <form action="">
                 <label for="name">Tu nombre</label>
-                <input type="text" name="nombre_form" id="name">
+                <input type="text" id="nombre">
+
                 <label for="mail">Tu correo</label>
-                <input type="mail" name="correo_form" id="mail">
-                <label for="message">Tu mensaje...</label>
-                <textarea name="mensaje_form" id="message" cols="30" rows="10"></textarea>
-                <button type='submit'  class="btn btn-dark">Enviar</button>
+                <input type="mail" id="correo">
+
+                <label for="message">Tu clave</label>
+                <textarea name="message" id="password" cols="30" rows="10"></textarea>
+
+                <button class="btn btn-dark">registrarse</button>
+
             </form>
         </div>
     </section>

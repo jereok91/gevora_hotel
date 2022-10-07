@@ -262,7 +262,28 @@
     margin-bottom: 10px;
     border: 1px solid #ddd;
   }
+  /* registro */
+  #registro {
+    color: #4d4d4d;
+  }
   
+  #registro h1 {
+    padding-bottom: 40px;
+    font-weight: lighter;
+  }
+  
+  #registro label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #registro input,
+  #registro textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
   /* Features Contact */
   #features-contact .location {
     background: url('../img/contact1.jpg');
