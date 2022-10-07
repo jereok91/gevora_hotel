@@ -58,7 +58,7 @@ body {
     background-color: #6464f8;
 }
 
-.formulario {
+#formulario {
     width: 400px;
     padding: 1rem;
     margin: 2rem;
@@ -100,7 +100,7 @@ body {
     padding: 2rem 0;
 }
 
-.formulario input {
+#formulario input {
     width: 70%;
     display: block;
     margin: auto;
@@ -115,7 +115,7 @@ body {
     color: white;
 }
 
-.formulario input[type="button"] {
+#formulario input[type="button"] {
     width: 60%;
     margin: auto;
     border: solid thin white;

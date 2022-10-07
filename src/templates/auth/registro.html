@@ -4,90 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" media="screen and (max width:760px)" href="../static/css/mobile.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    
-    <title>hotel gevora | contact</title>
-</head>
-<body>
-    <header>
-        <nav id="navbar" class="py-70">
-            <div class="container">
-                <h1 class="logo"><a href="index.html">hotel gevora</a> </h1>
-                <ul>
-                    <li><a href="index.html">inicio</a></li>
-                    <li><a href="sobrenosotros.html">sobre nosotros</a></li>
-                    <li><a href="contact.html">contacto</a></li>
-                    <li><a href="login.html">inicio de sesion</a></li>
-                    <li><a href="registro.html"class="current">registro</a></li>
-                    
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <hr>
-
-    <section id="registro" class="py-80">
-        <div class="container">
-            <h1>Contactenos</h1>
-            <form action="">
-                <label for="name">Tu nombre</label>
-                <input type="text" id="nombre">
-
-                <label for="mail">Tu correo</label>
-                <input type="mail" id="correo">
-
-                <label for="message">Tu clave</label>
-                <textarea name="message" id="password" cols="30" rows="10"></textarea>
-
-                <button class="btn btn-dark">registrarse</button>
-
-            </form>
-        </div>
-    </section>
-
-    <section id="features-contact">
-        <div class="box location">
-            <h4>Ubicacion</h4>
-            <p>carrera 4a Centro de bogota</p>
-        </div>
-        <div class="box phone">
-            <h4>Numero de telefono</h4>
-            <p>302 306 7777</p>
-        </div>
-        <div class="box email">
-            <h4>Direccion de correo</h4>
-            <p>hotelgevora@gmail.com</p>
-        </div>
-    </section>
-
-    <div class="clr"></div>
-
-    <footer id="mainfooter" >
-        <p>&copy; 2022 hotel gevora</p>
-    </footer>
-
-
     <link rel="stylesheet" href="../../static/css/login_registro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <title>login o registro</title>
+    <title>hotel gevora | registro</title>
 </head>
 <body>
+
+<section id="formulario">
     <div class="container-form sign-up">
-        <!-- <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido a Genova</h2>
-                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                <button class="sign-up-btn">Iniciar Sesion</button>
-            </div>
-        </div> -->
-        <form class="formulario">
+        <form action="/registro/guardar" method="post" enctype="multipart/form-data">
             <h2 class="create-account">Crear una cuenta</h2>
             <div class="iconos">
                 <div class="border-icon">
@@ -101,41 +29,16 @@
                 </div>
             </div>
             <p class="cuenta-gratis">Crear una cuenta gratis</p>
-            <input type="number" placeholder="Cedula">
-            <input type="text" placeholder="Nombre">
-            <input type="number" placeholder="celular">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Registrarse">
+            <label for="name">Tu nombre</label>
+            <input type="text" name="nombre_form" id="name">
+            <label for="mail">Tu correo</label>
+            <input type="email" name="correo_form" id="mail">
+            <label for="message">Tu contraseña</label>
+            <input type="password" name="password_form" id="password">
+            <button type='submit'  class="btn btn-dark">registrarse</button>
         </form>
     </div>
-    <!-- <div class="container-form sign-in">
-        <form class="formulario">
-            <h2 class="create-account">Iniciar Sesion</h2>
-            <div class="iconos">
-                <div class="border-icon">
-                    <i class='bx bxl-instagram'></i>
-                </div>
-                <div class="border-icon">
-                    <i class='bx bxl-linkedin' ></i>
-                </div>
-                <div class="border-icon">
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-            </div>
-            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Iniciar Sesion">
-        </form>
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido de nuevo</h2>
-                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
-                <button class="sign-in-btn">Registrarse</button>
-            </div>
-        </div>
-    </div> -->
-    <!-- <script src="./script/login_registro.js"></script> -->
+</section>
+
 </body>
 </html>

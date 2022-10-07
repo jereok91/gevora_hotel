@@ -8,14 +8,6 @@ app=Flask(__name__)
 
 DATABASE = './src/database/HOTEL_GEVORA.s3db'
 
-# def sql_connection():
-#  try:
-#  con =
-# sqlite3.connect('’)
-#  return con;
-#  except Error:
-#  print(Error)
-
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -47,11 +39,28 @@ def contact_guardar():
     cursorObj = con
     cursorObj.execute(strsql, datos)
     cursorObj.commit()
+    cursorObj.close()
     return redirect('/contact.html')
 
 @app.route('/login.html')
 def login():
     return render_template('auth/login.html')
+
+@app.route('/login/guardar', methods=['POST'])
+def login_guardar():
+    print("prueba")
+    _nombre = request.form['nombre_form']
+    _correo = request.form['correo_form']
+    _password = request.form['password_form']
+    #conet DB SQL lite
+    strsql = "SELECT * FROM registro"
+    datos=(_nombre, _correo, _password)
+    con = get_db()
+    cursorObj = con
+    cursorObj.execute(strsql, datos)
+    cursorObj.commit()
+    cursorObj.close()
+    return redirect('/registro.html')
 
 @app.route('/index.html')
 def index():
@@ -60,6 +69,22 @@ def index():
 @app.route('/registro.html')
 def registro():
     return render_template('auth/registro.html')
+
+@app.route('/registro/guardar', methods=['POST'])
+def registro_guardar():
+    print("prueba")
+    _nombre = request.form['nombre_form']
+    _correo = request.form['correo_form']
+    _password = request.form['password_form']
+    #conet DB SQL lite
+    strsql = "INSERT INTO registro(nombre, correo, password) VALUES(?, ?, ?)"
+    datos=(_nombre, _correo, _password)
+    con = get_db()
+    cursorObj = con
+    cursorObj.execute(strsql, datos)
+    cursorObj.commit()
+    cursorObj.close()
+    return redirect('/registro.html')
 
 if __name__=='__main__':
     app.run(port=5000)
