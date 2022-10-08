@@ -46,21 +46,23 @@ def contact_guardar():
 def login():
     return render_template('auth/login.html')
 
-@app.route('/login/guardar', methods=['POST'])
+@app.route('/login/guardar', methods=['GET', 'POST'])
 def login_guardar():
-    print("prueba")
-    _nombre = request.form['nombre_form']
-    _correo = request.form['correo_form']
-    _password = request.form['password_form']
+    if request.method == 'POST':
     #conet DB SQL lite
-    strsql = "SELECT * FROM registro"
-    datos=(_nombre, _correo, _password)
-    con = get_db()
-    cursorObj = con
-    cursorObj.execute(strsql, datos)
-    cursorObj.commit()
-    cursorObj.close()
-    return redirect('/registro.html')
+        strsql = "SELECT correo,password FROM registro where correo='"+name+"' and password = '"+password+"'" 
+        con = get_db()
+        cursorObj = con
+        cursorObj.execute(strsql)
+        cursorObj.commit()
+        cursorObj.close()
+        results = cursorObj.fetchall()
+        name = request.form['name']
+        password = request.form['password']
+        if len(results) == 0:
+            print("validar datos erroneos por favor")
+        else:
+            return render_template(login.html)
 
 @app.route('/index.html')
 def index():
