@@ -4,7 +4,7 @@ from flask import Flask, render_template, g, request, redirect
 
 import sqlite3
 
-app=Flask(__name__)
+app=Flask(__name__,)
 
 DATABASE = './src/database/HOTEL_GEVORA.s3db'
 

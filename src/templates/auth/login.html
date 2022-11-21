@@ -27,17 +27,17 @@
     </header>
     
         <div class="login-box">
-            <img class="avatar" src="/static/img/logo1.jpg" alt="">
+            <img class="avatar" src="/src/static/img/logo1.jpg" alt="errorfoto">
             <h1>iniciar sesion</h1>
-            <form>
+            <form method="POST">
                 <!--username-->
                 <label for="username"></label>
-                <input type="text" placeholder="correo">
+                <input type="name" name="correo" placeholder="correo">
                 <!--password-->
                 <label for="password"></label>
-                <input type="password" placeholder="contraseña">
+                <input type="password" name="password" placeholder="password">
 
-                <input type="submit" value="entrar">
+                <input type="submit" name="enviar">
 
                 <a href="#">olvidaste la contraseña?</a>
                 <a href="registro.html">no tienes una cuenta? - Registrate</a>
